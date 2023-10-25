@@ -23,4 +23,4 @@
 * Select the corresponding mode
 * Click Run in the Output (usually it takes a while to wait)
 * Click Export in the Output and select the output path to get the list of results
-* The more detailed instruction on how to use Targeted_extraction is available via the link(https://pan.baidu.com/s/1g9eR9ghqaA_1ooTpR-avuA?pwd=e6xj).
+* The more detailed instruction on how to use Targeted_extraction is available via the files (/Targeted_extraction/The manual of Targeted_extraction.docx and /Targeted_extraction/The manual of Database_construction.docx).
