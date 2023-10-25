@@ -1,26 +1,26 @@
 # Targeted_extraction
 
-* Targeted_extraction is an automatic method based on convolutional neural network (CNN) for image classification and Faster R-CNN for peak location/ classification in untargeted LC-HRMS data.
+* Targeted_extraction is an automatic tool for achieving targeted extraction of metabolite EIC peaks in untargeted LC-HRMS data.
 
-![1-s2 0-S0003267022007607-ga1_lrg](https://user-images.githubusercontent.com/109707707/180228801-f7531403-c59b-417f-a941-c8f919913054.jpg)
+![Fig 4](https://github.com/JunZeng1999/Targeted_extraction/assets/109707707/8dcd83c8-c201-4c21-b518-7d7249fa4283)
+
 
 # Cite
 
-* Image classification combined with faster R–CNN for the peak detection of complex components and their metabolites in untargeted LC-HRMS data
-* Link: https://doi.org/10.1016/j.aca.2022.340189
+* Combination of in silico Prediction and Convolutional Neural Network framework for Targeted Screening of Metabolites from LC-HRMS Fingerprints: A case study with “Pericarpium Citri Reticulatae - Fructus Aurantii”
 
 # Requirements for Peak_CF operation
 * Python, version 3.7 or greater
 * Pytorch 1.9.0
-* Pycocotools (Windows: pip install pycocotools-windows)
 * Windows 10
 * Install additional libraries, listed in the requirements.txt
 
 # Usage
-* Create three folders for the results of the operations (your path/photo, peak, result)
-* Copy the data file (.mzML) to the current directory
-* Download the model (link：https://pan.baidu.com/s/1h4B7ZrkiF-twbPTDnf8LgQ?pwd=peak), then unzip it into the save_weights folder.
-* Open Peak_CF.py(Modify parameters, Loading the trained model weights, Modify the path where the results are saved)
-* Open draw_box_utils.py(Modify parameters, Modify the path to save the result)
-* Run Peak_CF.py
-* The more detailed instruction on how to use Peak_CF is available via the link(https://pan.baidu.com/s/1VbuS4V3thF6xJnFH9DRu_Q?pwd=peak).
+* Before running Targeted_extraction_main.py, please run Database_construction.py first
+* Download the model (/Targeted_extraction/save_weights/Classifier99.pth), then unzip it into the save_weights folder.
+* Run Targeted_extraction_main.py
+* Select blank group, administration group, and m/z list for Input
+* Select the corresponding mode
+* Click Run in the Output (usually it takes a while to wait)
+* Click Export in the Output and select the output path to get the list of results
+* The more detailed instruction on how to use Targeted_extraction is available via the link(https://pan.baidu.com/s/1ibcdX58qYPo1r4dcCyQagg?pwd=o9m0).
