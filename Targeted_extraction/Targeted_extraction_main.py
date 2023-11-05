@@ -200,7 +200,7 @@ class GUI(tk.Frame):
                     scan_precursor_mz_2 = np.array(scan_precursor_mz_2)
                     scan_precursor_i_2 = np.array(scan_precursor_i_2)
 
-                    # data process
+                    # data processing
                     if self.mode == 0:
                         ms_path = "./MS/negative/"
                     if self.mode == 1:
