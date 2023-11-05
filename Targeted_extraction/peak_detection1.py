@@ -80,9 +80,6 @@ def identify_ridge_lines(matr, max_distances, gap_thresh):
         for line in ridge_lines:
             line[2] += 1
 
-        # XXX These should always be all_max_cols[row]
-        # But the order might be different. Might be an efficiency gain
-        # to make sure the order is the same and avoid this iteration
         prev_ridge_cols = np.array([line[1][-1] for line in ridge_lines])
         # Look through every relative maximum found at current row
         # Attempt to connect them with existing ridge lines.
@@ -108,9 +105,6 @@ def identify_ridge_lines(matr, max_distances, gap_thresh):
                 ridge_lines.append(new_line)
 
         # Remove the ridge lines with gap_number too high
-        # XXX Modifying a list while iterating over it.
-        # Should be safe, since we iterate backwards, but
-        # still tacky.
         for ind in range(len(ridge_lines) - 1, -1, -1):
             line = ridge_lines[ind]
             if line[2] > gap_thresh:
@@ -196,16 +190,11 @@ def identify_valley_lines(matr, max_distances, gap_thresh):
         for line in valley_lines:
             line[2] += 1
 
-        # XXX These should always be all_min_cols[row]
-        # But the order might be different. Might be an efficiency gain
-        # to make sure the order is the same and avoid this iteration
         prev_valley_cols = np.array([line[1][-1] for line in valley_lines])
         # Look through every relative maximum found at current row
         # Attempt to connect them with existing ridge lines.
         for ind, col in enumerate(this_min_cols):
-            # If there is a previous valley line within
-            # the max_distance to connect to, do so.
-            # Otherwise start a new one.
+            
             line = None
             if len(prev_valley_cols) > 0:
                 diffs = np.abs(col - prev_valley_cols)
@@ -224,9 +213,6 @@ def identify_valley_lines(matr, max_distances, gap_thresh):
                 valley_lines.append(new_line)
 
         # Remove the valley lines with gap_number too high
-        # XXX Modifying a list while iterating over it.
-        # Should be safe, since we iterate backwards, but
-        # still tacky.
         for ind in range(len(valley_lines) - 1, -1, -1):
             line = valley_lines[ind]
             if line[2] > gap_thresh:
