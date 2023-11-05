@@ -25,4 +25,4 @@
 * Select the desired mode (positive/negative ion mode)
 * Click on “Run” under the “Output” option
 * Click on “Export” under the “Output” option and select the path for the result list
-* The more detailed instruction on how to use Targeted_extraction is available via the files (/Targeted_extraction/The manual of Targeted_extraction.docx and /Targeted_extraction/The manual of Database_construction.docx).
+* The more detailed instruction on how to use Targeted_extraction is available via the link (https://pan.baidu.com/s/1l0iNyqvAiYRQraBrZY3Daw?pwd=w8qb)
