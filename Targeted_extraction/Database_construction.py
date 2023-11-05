@@ -4,7 +4,7 @@ import numpy as np
 from rdkit.Chem import Descriptors
 
 
-# Unified structural formula
+# Standardize the SMILES format of molecules
 # csv_data1 = pd.read_csv('your path/BioTransformer(superbio)/C1/bio_1.csv')
 # SMILES1 = csv_data1['SMILES'].tolist()
 # SMILES1 = np.array(SMILES1)
@@ -40,7 +40,7 @@ from rdkit.Chem import Descriptors
 # csv_data2.to_csv("your path/C1/CTS_1.csv", index=False, encoding="utf-8")
 
 
-# Combine the predicted results of each prototype into a list
+# Integrate the predicted results from three tools for one component
 # csv_CTS = pd.read_csv('your path/C1/CTS_1.csv')
 # ID_mean1_1 = []
 # ID_mean1 = csv_CTS['genKey'].tolist()
@@ -82,7 +82,7 @@ from rdkit.Chem import Descriptors
 # df.to_csv("your path/C1/C1.csv")
 
 
-# All the predicted results are integrated into a total metabolite list
+# Integrate all the predicted results of metabolites for each component into one list
 # Calculate molecular weight
 # Convert standardized SMILES to InChIKeys
 # csv1 = pd.read_csv('your path/C1/C1.csv')
@@ -125,7 +125,7 @@ from rdkit.Chem import Descriptors
 # df.to_csv("your path/C1_C2.csv")
 
 
-# Construct a database that can be used for MS-FINDER
+# Build a database based on the integrated results mentioned above, which can be used for MS-FINDER
 # csv = pd.read_csv('your path/C1_C2.csv')
 # ID_1 = csv['ID'].tolist()
 # smiles_1 = csv['SMILES'].tolist()
@@ -165,7 +165,7 @@ from rdkit.Chem import Descriptors
 # df.to_csv("your path/C1_C2_database1.csv")
 
 
-# Remove duplicates from the database
+# Remove duplicate entries from the database
 # csv = pd.read_csv('your path/C1_C2_database1.csv')
 # smiles = csv['SMILES'].tolist()
 # smiles = np.array(smiles)
@@ -214,8 +214,8 @@ from rdkit.Chem import Descriptors
 # df.to_csv("your path/C1_C2_database2.csv")
 
 
-# The molecular formula is determined both by the following
-# calculations and by entering SMILES into the CTS
+# Identify the molecular formula of predicted metabolites
+# Input SMILES into CTS
 # csv1 = pd.read_csv('your path/C1_C2_database1.csv')
 # Formula_2 = csv1['Formula'].tolist()
 # Exact_mass_2 = csv1['Exact mass'].tolist()
@@ -247,7 +247,7 @@ from rdkit.Chem import Descriptors
 # df.to_csv("your path/C1_C2_database3.csv")
 
 
-# Construct a unified structural formula for the data obtained from literature
+# Establish a unified SMILES format for metabolites reported in the literature
 # csv_data1 = pd.read_csv('your path/literature_database1.csv')
 # SMILES1 = csv_data1['SMILES'].tolist()
 # SMILES1 = np.array(SMILES1)
@@ -266,7 +266,7 @@ from rdkit.Chem import Descriptors
 # csv_data1.to_csv("your path/literature_database2.csv", index=False, encoding="utf-8")
 
 
-# Add molecular weight and other information to the literature data
+# Add molecular weight and other information to the metabolite data obtained through literature retrieval
 # csv = pd.read_csv('your path/literature_database2.csv')
 # smiles = csv['Unified_smiles'].tolist()
 # smiles = np.array(smiles)
@@ -315,8 +315,8 @@ from rdkit.Chem import Descriptors
 # df.to_csv("your path/literature_database3.csv")
 
 
-# Literature data are manually combined with metabolite prediction data,
-# and then duplicates are removed
+# Integrate literature data with predicted metabolite data, 
+# removing duplicate entries
 # csv = pd.read_csv('your path/C1_C2_literature_database1.csv')
 # smiles = csv['SMILES'].tolist()
 # smiles = np.array(smiles)
@@ -365,7 +365,7 @@ from rdkit.Chem import Descriptors
 # df.to_csv("your path/C1_C2_literature_database2.csv")
 
 
-# Get the m/z information
+# Retrieve m/z information from the database in order to run “Targeted_extraction_main.py”
 # csv1 = pd.read_csv('your path/C1_C2_literature_database2.csv')
 # Formula_1 = csv1['Formula'].tolist()
 # Exact_mass_1 = csv1['Exact mass'].tolist()
