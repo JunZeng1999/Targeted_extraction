@@ -8,7 +8,7 @@
 
 # Cite
 
-* Combination of in silico Prediction and Convolutional Neural Network framework for Targeted Screening of Metabolites from LC-HRMS Fingerprints: A case study with “Pericarpium Citri Reticulatae - Fructus Aurantii”
+* Combination of in silico prediction and convolutional neural network framework for targeted screening of metabolites from LC-HRMS fingerprints: A case study with “Pericarpium Citri Reticulatae - Fructus Aurantii”
 
 # Requirements for Peak_CF operation
 * Python, version 3.7 or greater
